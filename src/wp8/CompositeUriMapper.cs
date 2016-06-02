@@ -11,9 +11,10 @@ internal class CompositeUriMapper : UriMapperBase
         string launchUri = uri.ToString();
         if (launchUri.StartsWith("/Protocol?encodedLaunchUri="))
         {
-            int launchUrlIndex = launchUri.IndexOf("encodedLaunchUri=");
-            launchUrl = System.Net.HttpUtility.UrlDecode(launchUri.Substring(launchUrlIndex+17));
-            return new Uri("/MainPage.xaml", UriKind.Relative);
+//            int launchUrlIndex = launchUri.IndexOf("encodedLaunchUri=");
+//            launchUrl = System.Net.HttpUtility.UrlDecode(launchUri.Substring(launchUrlIndex+17));
+//            return new Uri("/MainPage.xaml", UriKind.Relative);
+            return null;
         }
 		var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 		var types = assemblies.SelectMany(a =>
